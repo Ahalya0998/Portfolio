@@ -1,9 +1,8 @@
 html {
-    width: 100%; /* Make sure the root element spans the full width */
-    height: 100%; /* Ensure it also takes up the full height */
-    margin: 0; /* Remove default margin */
+    width: 100%; 
+    height: 100%; 
+    margin: 0; 
 }
-
 
 body {
     font-family: Arial, sans-serif;
@@ -11,21 +10,21 @@ body {
     padding: 0;
     background-color: black;
     color: white;
-    width: 100%; /* Ensures body takes the full width */
-    box-sizing: border-box; /* Includes padding and border in the total width */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    width: 100%; 
+    box-sizing: border-box; 
+    overflow-x: hidden; 
 }
 
 
 
 header {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     padding: 10px 0;
-   
+    
 }
 nav, header {
-    width: 100%; /* Ensures the header spans the full width */
-    box-sizing: border-box; /* Includes padding and border in the element's total width */
+    width: 100%; 
+    box-sizing: border-box;
 }
 
 
@@ -78,7 +77,7 @@ h2 {
     color: #fff;
     padding: 15px;
     border-radius: 5px;
-    width: calc(50% - 20px); /* Two boxes per row, with space between */
+    width: calc(50% - 20px);
     box-sizing: border-box;
     
 }
@@ -104,65 +103,53 @@ h2 {
 }
 
 .experience-box {
-    background-color: #444;  /* Box background color */
-    color: #fff;  /* Text color */
-    padding: 20px;  /* Padding around the content */
-    margin: 20px 0;  /* Margin for spacing between sections */
-    border-radius: 8px;  /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for the box */
-    width: 100%;  /* Set width of the box */
-    box-sizing: border-box;  /* Include padding in width calculation */
+    background-color: #444;  
+    color: #fff;  
+    padding: 20px;  
+    margin: 20px 0;  
+    border-radius: 8px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 100%;  
+    box-sizing: border-box;  
 }
 
 
 
 .experience-box ul {
-    list-style-type: disc;  /* Bullet points for list */
-    margin-left: 20px;  /* Left margin for list */
+    list-style-type: disc;  
+   
 }
 
 .experience-box li {
-    margin-bottom: 20px;  /* Space between list items */
+    margin-bottom: 20px;  
 }
 
-.skills-container {
-    display: flex; /* Use flexbox to align items in a row */
-    justify-content: space-between; /* Add space between containers */
+.content {
+    display: flex;
+    flex-direction: column;  
+    gap: 20px;  
 }
 
 .skills-box, .skill-box {
-    background-color: #444;  /* Box background color */
-    color: #fff;  /* Text color */
-    padding: 20px;  /* Padding around the content */
-    border-radius: 8px;  /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for the box */
-    width: 48%;  /* Set width of the box */
-    box-sizing: border-box;  /* Include padding in width calculation */
+    background-color: transparent;  
+    color: #faf6f6;  
+    padding: 20px;  
+    border-radius: 8px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    width: 100%;  
+    box-sizing: border-box;  
+}
+
+.skills-box h2, .skill-box h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.skills-box p, .skill-box p {
+    margin-bottom: 10px;
 }
 
 
-
-.skill-box {
-    /* Right-aligned by setting margin-left: auto */
-    margin-left:auto; /* Push the box to the right side */
-    margin-top: -5%;
-}
-
-
-/* Responsive Design */
-
-@media (max-width: 768px) {
-    body {
-        width: 100%; /* Ensure body takes full width on mobile */
-    }
-
-    .content {
-        width: 100%; /* Ensure content container takes the full width on mobile */
-    }
-    .project-box {
-        width: 100%; /* One box per row on smaller screens */
-    }
-}
 
 /* Add space between paragraphs */
 p {
@@ -182,38 +169,48 @@ p {
     line-height: 1.6;
 }
 
+/* Responsive Design */
 
 
 @media (max-width: 768px) {
+    /* Ensure the body spans the full width of the screen */
     body {
-        width: 100%; /* Ensure body takes full width on mobile */
+        width: 100%; /* Full width */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        min-width: 100vw; /* Prevent horizontal scrolling */
+        overflow-x: hidden; /* Prevent horizontal scrolling if necessary */
     }
 
     .content {
-        width: 100%; /* Ensure content container takes the full width on mobile */
+        width: 100%; /* Full width for content */
+        padding: 10px; /* Add some padding if needed */
     }
+
     header {
         text-align: left;
-        padding-left: 20px;
-       
+        padding-left: 20px; /* Adjust left padding */
     }
 
     nav ul {
         display: flex;
-        flex-direction: row; /* Align items in a row */
+        flex-direction: row; /* Align items horizontally */
         padding: 0;
-        gap: 10px; /* Adjust the value as per your requirement */
-       
+        gap: 10px; /* Add space between list items */
+        flex-wrap: wrap; /* Wrap to the next line on smaller screens */
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* Add margin between items */
     }
 
     .project-box {
-        margin: 10px 0;
+        width: 100%; /* One box per row on smaller screens */
+        padding: 10px; /* Add padding for spacing */
+        box-sizing: border-box; /* Ensures padding is included in the width */
     }
-} 
+}
+
 
 
 
