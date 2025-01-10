@@ -21,7 +21,7 @@ Follow these steps to run the portfolio locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Ahalya0998/portfolio.git
+   git clone https://github.com/Ahalya0998/Portfolio.git
 2. Navigate to the project folder:
    cd portfolio
 3. Install dependencies:
