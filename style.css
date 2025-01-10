@@ -1,3 +1,9 @@
+html {
+    width: 100%; /* Make sure the root element spans the full width */
+    height: 100%; /* Ensure it also takes up the full height */
+    margin: 0; /* Remove default margin */
+}
+
 
 body {
     font-family: Arial, sans-serif;
@@ -5,22 +11,33 @@ body {
     padding: 0;
     background-color: black;
     color: white;
+    width: 100%; /* Ensures body takes the full width */
+    box-sizing: border-box; /* Includes padding and border in the total width */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
+
+
 header {
-    background-color: #333;
+    background-color: black;
     padding: 10px 0;
    
 }
+nav, header {
+    width: 100%; /* Ensures the header spans the full width */
+    box-sizing: border-box; /* Includes padding and border in the element's total width */
+}
+
 
 nav ul {
     list-style-type: none;
     padding: 0;
 }
 
+
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 40px;
 }
 
 nav ul li a {
@@ -133,7 +150,15 @@ h2 {
 
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
+    body {
+        width: 100%; /* Ensure body takes full width on mobile */
+    }
+
+    .content {
+        width: 100%; /* Ensure content container takes the full width on mobile */
+    }
     .project-box {
         width: 100%; /* One box per row on smaller screens */
     }
@@ -151,8 +176,6 @@ p {
     line-height: 1.5;
 }
 
-
-
 .contact-info {
     font-family: 'Verdana', sans-serif;
     font-size: 20px;
@@ -161,18 +184,26 @@ p {
 
 
 
-
-
 @media (max-width: 768px) {
+    body {
+        width: 100%; /* Ensure body takes full width on mobile */
+    }
+
+    .content {
+        width: 100%; /* Ensure content container takes the full width on mobile */
+    }
     header {
         text-align: left;
         padding-left: 20px;
+       
     }
 
     nav ul {
         display: flex;
-        flex-direction: column;
+        flex-direction: row; /* Align items in a row */
         padding: 0;
+        gap: 10px; /* Adjust the value as per your requirement */
+       
     }
 
     nav ul li {
