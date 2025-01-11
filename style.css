@@ -2,6 +2,7 @@ html {
     width: 100%; 
     height: 100%; 
     margin: 0; 
+ 
 }
 
 body {
@@ -10,7 +11,7 @@ body {
     padding: 0;
     background-color: black;
     color: white;
-    width: 100%; 
+    width: auto; 
     box-sizing: border-box; 
     overflow-x: hidden; 
 }
@@ -18,7 +19,8 @@ body {
 
 
 header {
-    background-color: rgb(0, 0, 0);
+    
+    background-color: black;
     padding: 10px 0;
     
 }
@@ -30,7 +32,8 @@ nav, header {
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -79,6 +82,7 @@ h2 {
     border-radius: 5px;
     width: calc(50% - 20px);
     box-sizing: border-box;
+    border: 1px solid #fff;
     
 }
 
@@ -96,6 +100,7 @@ h2 {
     color: #1296ee;
     text-decoration: none;
     font-weight: bold;
+    
 }
 
 .project-box a:hover {
@@ -107,7 +112,8 @@ h2 {
     color: #fff;  
     padding: 20px;  
     margin: 20px 0;  
-    border-radius: 8px;  
+    border-radius: 8px; 
+    border: 1px solid #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     width: 100%;  
     box-sizing: border-box;  
@@ -124,39 +130,7 @@ h2 {
     margin-bottom: 20px;  
 }
 
-.content {
-    display: flex;
-    flex-direction: column;  
-    gap: 20px;  
-}
 
-.skills-box, .skill-box {
-    background-color: transparent;  
-    color: #faf6f6;  
-    padding: 20px;  
-    border-radius: 8px;  
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-    width: 100%;  
-    box-sizing: border-box;  
-}
-
-.skills-box h2, .skill-box h2 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-}
-
-.skills-box p, .skill-box p {
-    margin-bottom: 10px;
-}
-
-
-
-/* Add space between paragraphs */
-p {
-    margin-bottom: 15px;
-}
-
-/* Set different fonts for each section */
 .intro-text {
     font-family: 'Arial', sans-serif;
     font-size: 19px;
@@ -169,48 +143,57 @@ p {
     line-height: 1.6;
 }
 
-/* Responsive Design */
+
 
 
 @media (max-width: 768px) {
-    /* Ensure the body spans the full width of the screen */
+    
     body {
-        width: 100%; /* Full width */
-        margin: 0; /* Remove margin */
-        padding: 0; /* Remove padding */
-        min-width: 100vw; /* Prevent horizontal scrolling */
-        overflow-x: hidden; /* Prevent horizontal scrolling if necessary */
+        width: auto; 
+        margin: 0; 
+        min-width: 100vw; 
+        overflow-x: hidden; 
+        font-size: 14px;
+        padding: 10px;
     }
-
+    h1, h2 {
+        font-size: 18px;
+    }
     .content {
-        width: 100%; /* Full width for content */
-        padding: 10px; /* Add some padding if needed */
+        width: 100%; 
+        padding: 10px; 
     }
 
     header {
         text-align: left;
-        padding-left: 20px; /* Adjust left padding */
+        padding-left: 20px; 
+        background-color: black;
     }
 
     nav ul {
         display: flex;
-        flex-direction: row; /* Align items horizontally */
+        flex-direction: row; 
         padding: 0;
-        gap: 10px; /* Add space between list items */
-        flex-wrap: wrap; /* Wrap to the next line on smaller screens */
+        align-items: center;
+        gap: 10px; 
+        flex-wrap:  nowrap; 
     }
 
     nav ul li {
-        margin: 10px 0; /* Add margin between items */
+        margin: 10px 0; 
     }
 
     .project-box {
-        width: 100%; /* One box per row on smaller screens */
-        padding: 10px; /* Add padding for spacing */
-        box-sizing: border-box; /* Ensures padding is included in the width */
+        width: 100%;
+        padding: 10px; 
+        box-sizing: border-box; 
     }
+
+    
 }
 
 
 
+ 
 
+ 
